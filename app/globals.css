@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+}
+
+/* Focus styles */
+:where(button, [role="button"], a, input, select, textarea) {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50;
+}
+
+/* Print styles */
+@media print {
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  details {
+    display: block !important;
+  }
+
+  details > summary {
+    display: none !important;
+  }
+
+  details > div {
+    display: block !important;
+  }
+}
