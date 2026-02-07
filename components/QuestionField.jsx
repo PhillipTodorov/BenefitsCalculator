@@ -2,10 +2,10 @@ export function QuestionField({ question, value, onChange, error }) {
   const { id, label, description, type, options } = question;
 
   const inputClasses =
-    "mt-1 block w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 shadow-sm focus-visible:ring-brand focus-visible:ring-2 focus-visible:ring-offset-0";
+    "mt-1 block w-full rounded-md border border-slate-600 bg-slate-800 px-3 py-2 text-sm text-slate-100 shadow-sm focus-visible:ring-brand-light focus-visible:ring-2 focus-visible:ring-offset-0";
 
   const errorInputClasses =
-    "mt-1 block w-full rounded-md border border-red-500 px-3 py-2 text-sm text-slate-900 shadow-sm focus-visible:ring-red-500 focus-visible:ring-2 focus-visible:ring-offset-0";
+    "mt-1 block w-full rounded-md border border-red-500 bg-slate-800 px-3 py-2 text-sm text-slate-100 shadow-sm focus-visible:ring-red-500 focus-visible:ring-2 focus-visible:ring-offset-0";
 
   const describedBy = [
     description ? `${id}-hint` : null,
@@ -42,7 +42,7 @@ export function QuestionField({ question, value, onChange, error }) {
     <>
       {label}
       {question.required && (
-        <span className="ml-1 text-red-600" aria-hidden="true">
+        <span className="ml-1 text-red-400" aria-hidden="true">
           *
         </span>
       )}
@@ -50,13 +50,13 @@ export function QuestionField({ question, value, onChange, error }) {
   );
 
   const hintElement = description && (
-    <p id={`${id}-hint`} className="text-xs text-slate-600">
+    <p id={`${id}-hint`} className="text-xs text-slate-400">
       {description}
     </p>
   );
 
   const errorElement = error && (
-    <p id={`${id}-error`} className="text-xs text-red-600 mt-1" role="alert">
+    <p id={`${id}-error`} className="text-xs text-red-400 mt-1" role="alert">
       {error}
     </p>
   );
@@ -64,7 +64,7 @@ export function QuestionField({ question, value, onChange, error }) {
   if (type === "radio") {
     return (
       <fieldset className="space-y-1">
-        <legend className="block text-sm font-medium text-slate-900">
+        <legend className="block text-sm font-medium text-slate-100">
           {labelContent}
         </legend>
         {hintElement}
@@ -76,7 +76,7 @@ export function QuestionField({ question, value, onChange, error }) {
           {options?.map((opt) => (
             <label
               key={opt.value}
-              className="flex items-center gap-2 text-sm text-slate-800"
+              className="flex items-center gap-2 text-sm text-slate-300"
             >
               <input
                 type="radio"
@@ -84,7 +84,7 @@ export function QuestionField({ question, value, onChange, error }) {
                 value={opt.value}
                 checked={value === opt.value}
                 onChange={() => onChange(opt.value)}
-                className="h-4 w-4 border-slate-300 text-brand"
+                className="h-4 w-4 border-slate-600 bg-slate-800 text-brand"
                 aria-invalid={error ? "true" : undefined}
               />
               <span>{opt.label}</span>
@@ -99,14 +99,14 @@ export function QuestionField({ question, value, onChange, error }) {
   if (type === "checkbox") {
     return (
       <div className="space-y-1">
-        <label className="flex items-center gap-2 text-sm text-slate-800">
+        <label className="flex items-center gap-2 text-sm text-slate-300">
           <input
             type="checkbox"
             id={id}
             name={id}
             checked={Boolean(value)}
             onChange={(event) => onChange(event.target.checked)}
-            className="h-4 w-4 border-slate-300 text-brand"
+            className="h-4 w-4 border-slate-600 bg-slate-800 text-brand"
             aria-invalid={error ? "true" : undefined}
           />
           <span>{question.checkboxLabel ?? label}</span>
@@ -119,7 +119,7 @@ export function QuestionField({ question, value, onChange, error }) {
 
   return (
     <div className="space-y-1">
-      <label htmlFor={id} className="block text-sm font-medium text-slate-900">
+      <label htmlFor={id} className="block text-sm font-medium text-slate-100">
         {labelContent}
       </label>
       {hintElement}

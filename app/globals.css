@@ -16,7 +16,7 @@ body {
 
 /* Focus styles */
 :where(button, [role="button"], a, input, select, textarea) {
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900;
 }
 
 /* Print styles */

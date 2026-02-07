@@ -1,12 +1,12 @@
 import { PrintButton } from "./PrintButton";
 
 const STATUS_LABELS = {
-  likely: { label: "Likely eligible", color: "bg-emerald-50 text-emerald-800" },
+  likely: { label: "Likely eligible", color: "bg-emerald-950 text-emerald-300" },
   uncertain: {
     label: "Possibly eligible",
-    color: "bg-amber-50 text-amber-800"
+    color: "bg-amber-950 text-amber-300"
   },
-  unlikely: { label: "Unlikely eligible", color: "bg-slate-100 text-slate-700" }
+  unlikely: { label: "Unlikely eligible", color: "bg-slate-800 text-slate-400" }
 };
 
 export function ResultsView({ results, benefits, onEditAnswers }) {
@@ -23,17 +23,17 @@ export function ResultsView({ results, benefits, onEditAnswers }) {
   return (
     <section
       aria-labelledby="results-heading"
-      className="bg-white border rounded-lg shadow-sm p-6"
+      className="bg-slate-900 border border-slate-700 rounded-lg shadow-sm p-6"
     >
       <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
         <div>
           <h2
             id="results-heading"
-            className="text-xl font-semibold tracking-tight mb-1"
+            className="text-xl font-semibold tracking-tight mb-1 text-slate-50"
           >
             Your benefit guidance
           </h2>
-          <p className="text-sm text-slate-700 max-w-xl">
+          <p className="text-sm text-slate-300 max-w-xl">
             Based on your answers, here is a summary of benefits that may be
             relevant for you. This is guidance only &ndash; it does not guarantee you
             will receive any benefit.
@@ -44,25 +44,25 @@ export function ResultsView({ results, benefits, onEditAnswers }) {
           <button
             type="button"
             onClick={onEditAnswers}
-            className="inline-flex items-center rounded-md border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700"
+            className="inline-flex items-center rounded-md border border-slate-600 bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-300"
           >
             Go back and edit answers
           </button>
         </div>
       </div>
 
-      <div className="mb-4 rounded-md bg-slate-50 border border-slate-200 px-3 py-2 text-xs text-slate-700">
+      <div className="mb-4 rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-xs text-slate-300">
         <p>
           Likely eligible:{" "}
-          <span className="font-semibold text-emerald-700">
+          <span className="font-semibold text-emerald-400">
             {counts.likely}
           </span>{" "}
           &nbsp;|&nbsp; Possibly eligible:{" "}
-          <span className="font-semibold text-amber-700">
+          <span className="font-semibold text-amber-400">
             {counts.uncertain}
           </span>{" "}
           &nbsp;|&nbsp; Unlikely:{" "}
-          <span className="font-semibold text-slate-800">
+          <span className="font-semibold text-slate-400">
             {counts.unlikely}
           </span>
         </p>
@@ -77,14 +77,14 @@ export function ResultsView({ results, benefits, onEditAnswers }) {
           return (
             <article
               key={benefitId}
-              className="rounded-lg border border-slate-200 bg-slate-50 p-4"
+              className="rounded-lg border border-slate-700 bg-slate-800 p-4"
             >
               <div className="flex items-start justify-between gap-3 mb-2">
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-900">
+                  <h3 className="text-sm font-semibold text-slate-100">
                     {config.name}
                   </h3>
-                  <p className="text-xs text-slate-600">
+                  <p className="text-xs text-slate-400">
                     {config.shortDescription}
                   </p>
                 </div>
@@ -94,9 +94,9 @@ export function ResultsView({ results, benefits, onEditAnswers }) {
                   {status.label}
                 </span>
               </div>
-              <p className="text-sm text-slate-800 mb-2">{messages.short}</p>
-              <details className="text-xs text-slate-700">
-                <summary className="cursor-pointer font-medium text-slate-900">
+              <p className="text-sm text-slate-200 mb-2">{messages.short}</p>
+              <details className="text-xs text-slate-300">
+                <summary className="cursor-pointer font-medium text-slate-100">
                   What this means and what to do next
                 </summary>
                 <div className="mt-2 space-y-2">
@@ -113,7 +113,7 @@ export function ResultsView({ results, benefits, onEditAnswers }) {
                         href={config.links.official}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-brand underline"
+                        className="text-brand-light underline"
                       >
                         GOV.UK
                         <span className="sr-only"> (opens in a new tab)</span>
@@ -126,7 +126,7 @@ export function ResultsView({ results, benefits, onEditAnswers }) {
                             href={config.links.support}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-brand underline"
+                            className="text-brand-light underline"
                           >
                             Citizens Advice
                             <span className="sr-only"> (opens in a new tab)</span>
@@ -143,7 +143,7 @@ export function ResultsView({ results, benefits, onEditAnswers }) {
         })}
       </div>
 
-      <div className="mt-6 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+      <div className="mt-6 rounded-md border border-amber-800 bg-amber-950 px-3 py-2 text-xs text-amber-200">
         <p className="font-semibold">Important</p>
         <p>
           This calculator cannot take every detail of your situation into

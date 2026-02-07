@@ -131,20 +131,20 @@ export default function HomePage() {
       {!showResults && (
         <section
           aria-labelledby="landing-heading"
-          className="bg-white border rounded-lg shadow-sm p-6"
+          className="bg-slate-900 border border-slate-700 rounded-lg shadow-sm p-6"
         >
           <h2
             id="landing-heading"
-            className="text-xl font-semibold tracking-tight mb-2"
+            className="text-xl font-semibold tracking-tight mb-2 text-slate-50"
           >
             Check which benefits you might be able to claim
           </h2>
-          <p className="text-sm text-slate-700 mb-3">
+          <p className="text-sm text-slate-300 mb-3">
             Answer a few short questions (about 8 minutes) to see which UK
             benefits might be relevant for you. This tool is designed for people
             living in England, Wales, or Scotland.
           </p>
-          <ul className="list-disc list-inside text-sm text-slate-700 mb-4 space-y-1">
+          <ul className="list-disc list-inside text-sm text-slate-300 mb-4 space-y-1">
             <li>Your answers stay in your browser and are not saved.</li>
             <li>
               The calculator gives guidance only. It cannot guarantee you will
@@ -155,7 +155,7 @@ export default function HomePage() {
           <button
             type="button"
             onClick={handleStart}
-            className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-dark"
+            className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-light"
           >
             Start the calculator
           </button>
@@ -170,15 +170,15 @@ export default function HomePage() {
             onStepClick={goToStep}
           />
 
-          <div className="mt-4 bg-white border rounded-lg shadow-sm p-6">
+          <div className="mt-4 bg-slate-900 border border-slate-700 rounded-lg shadow-sm p-6">
             <h2
               ref={stepHeadingRef}
               tabIndex={-1}
-              className="text-lg font-semibold tracking-tight mb-1"
+              className="text-lg font-semibold tracking-tight mb-1 text-slate-50"
             >
               {currentSection.title}
             </h2>
-            <p className="text-sm text-slate-700 mb-4">
+            <p className="text-sm text-slate-300 mb-4">
               {currentSection.description}
             </p>
 
@@ -195,14 +195,14 @@ export default function HomePage() {
                 type="button"
                 onClick={handleBack}
                 disabled={currentStepIndex === 0}
-                className="inline-flex items-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 disabled:opacity-50"
+                className="inline-flex items-center rounded-md border border-slate-600 bg-slate-800 px-4 py-2 text-sm font-medium text-slate-300 disabled:opacity-50"
               >
                 Back
               </button>
               <button
                 type="button"
                 onClick={handleNext}
-                className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-dark"
+                className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-light"
               >
                 {currentStepIndex === SECTIONS.length - 1
                   ? "See your results"

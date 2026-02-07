@@ -3,7 +3,7 @@ import { QuestionField } from "./QuestionField";
 export function QuestionGroup({ sectionId, questions, answers, dispatch, errors }) {
   if (!questions.length) {
     return (
-      <p className="text-sm text-slate-700">
+      <p className="text-sm text-slate-400">
         There are no questions for this section based on your previous answers.
       </p>
     );
@@ -14,7 +14,7 @@ export function QuestionGroup({ sectionId, questions, answers, dispatch, errors 
       {questions.map((question) => (
         <div
           key={question.id}
-          className="rounded-md border border-slate-200 bg-slate-50 px-3 py-3"
+          className="rounded-md border border-slate-700 bg-slate-800 px-3 py-3"
         >
           <QuestionField
             question={question}
