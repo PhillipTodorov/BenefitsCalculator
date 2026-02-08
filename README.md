@@ -1,4 +1,4 @@
-# Benefits Eligibility Calculator
+# CheckMyEntitlements
 
 **Find out which UK benefits you might be able to claim.**
 
@@ -45,7 +45,7 @@ Answer questions → Get matched to benefits → See next steps — all in your 
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│               Benefits Eligibility Calculator                │
+│                     CheckMyEntitlements                      │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  ┌───────────────┐                                         │
@@ -115,8 +115,8 @@ Whether you provide regular care, hours per week, whether the person you care fo
 
 ```bash
 # Clone the repo
-git clone https://github.com/PhillipTodorov/BenefitsCalculator.git
-cd BenefitsCalculator
+git clone https://github.com/PhillipTodorov/CheckMyEntitlements.git
+cd CheckMyEntitlements
 
 # Install dependencies
 npm install
@@ -139,7 +139,7 @@ npm start
 ## Project Structure
 
 ```
-BenefitsCalculator/
+CheckMyEntitlements/
 ├── package.json                  # Dependencies & scripts
 ├── next.config.mjs               # Next.js configuration
 ├── tailwind.config.js            # Custom brand colours

@@ -1,6 +1,6 @@
 # Project Initiation Document
 
-## Benefits Eligibility Calculator
+## CheckMyEntitlements
 **Core Product Feature**
 
 ---
@@ -14,7 +14,7 @@
 
 ## 1. Executive Summary
 
-This document outlines the development of a Benefits Eligibility Calculator — a web-based tool designed to help individuals understand which UK welfare benefits they may be eligible for based on their circumstances. The tool is a core feature of the benefits support platform, providing users with an accessible entry point to understanding their entitlements.
+This document outlines the development of a CheckMyEntitlements — a web-based tool designed to help individuals understand which UK welfare benefits they may be eligible for based on their circumstances. The tool is a core feature of the benefits support platform, providing users with an accessible entry point to understanding their entitlements.
 
 The calculator guides users through a series of questions about their health, living situation, employment status, and care needs, then provides a personalised summary of potentially relevant benefits with guidance on next steps.
 
@@ -34,7 +34,7 @@ Existing tools (Turn2us Benefits Calculator, Entitled To, Policy in Practice) pr
 
 ### 2.2 Strategic Fit
 
-The Benefits Eligibility Calculator is a foundational component of the benefits support platform. It serves as the primary user entry point, helping individuals understand their potential entitlements before proceeding to more detailed application support tools. The calculator:
+The CheckMyEntitlements is a foundational component of the benefits support platform. It serves as the primary user entry point, helping individuals understand their potential entitlements before proceeding to more detailed application support tools. The calculator:
 
 - Reduces user anxiety by providing clear, personalised guidance
 - Captures initial user data that can inform subsequent support features
@@ -507,7 +507,7 @@ The following are explicitly out of scope for this portfolio version but represe
 
 ## Appendix B: Implementation
 
-The Benefits Eligibility Calculator has been built as a React application with the following components:
+The CheckMyEntitlements has been built as a React application with the following components:
 
 - Multi-step form with 5 sections and ~23 questions
 - Conditional question logic based on user answers
@@ -517,7 +517,7 @@ The Benefits Eligibility Calculator has been built as a React application with t
 - Fully responsive design (mobile-first)
 - Accessible form controls with ARIA labels
 
-**File:** `benefits-eligibility-calculator.jsx`
+**File:** `checkmyentitlements.jsx`
 
 ---
 

@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Benefits Eligibility Calculator",
+  title: "CheckMyEntitlements",
   description:
     "A simple, supportive tool to help you understand which UK benefits you might be able to claim."
 };
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
             <div className="mx-auto max-w-4xl px-4 py-4 flex items-center justify-between gap-4">
               <div>
                 <h1 className="text-lg font-semibold tracking-tight text-slate-50">
-                  Benefits Eligibility Calculator
+                  CheckMyEntitlements
                 </h1>
                 <p className="text-sm text-slate-400">
                   Guidance tool for England, Wales and Scotland
