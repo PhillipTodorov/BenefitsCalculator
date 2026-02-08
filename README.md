@@ -10,6 +10,8 @@ Answer questions → Get matched to benefits → See next steps — all in your 
 ![Tailwind](https://img.shields.io/badge/tailwind-3-blue)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
+**Live Demo:** [https://checkmyentitlements.vercel.app/](https://checkmyentitlements.vercel.app/)
+
 ---
 
 ## What It Does
